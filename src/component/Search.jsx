@@ -1,4 +1,5 @@
 import React from "react";
+import "./search.css";
 import { useState, useEffect } from "react";
 
 function Search() {
@@ -46,12 +47,10 @@ function Search() {
   } else {
     return (
       <div className="wrapper">
-        {" "}
-        {/* this is mothe tag */}
-        {/*  */}
+        {/* this is mother tag */}
+
         <div className="search-wrapper">
-          {" "}
-          {/* this div have search box and a span tag */}
+          {/* this div have search box */}
           <input
             type="search"
             name="search-form"
@@ -61,19 +60,20 @@ function Search() {
             value={q} //q comming from use state
             onChange={(e) => setQ(e.target.value)} //get and update value
           />
-          <span className="sr-only">Search countries here</span>
         </div>
-        {/*  */}
-        <div>
+        {/* this div is our cards */}
+        <div className="card-grid">
           {search(items).map((item) => (
-            <div className="card" key={item.callingCodes}>
-              <h2 className="card-name">{item.name}</h2>
-              <img src={item.flag} alt={item.name} />
-              <ol className="card-list">
-                <li>population:{item.population}</li>
-                <li>Region: {item.region}</li>
-                <li>Capital:{item.capital}</li>
-              </ol>
+            <div className="card">
+              <div className="Card" key={item.callingCodes}>
+                <h2 className="card-name">{item.name}</h2>
+                <img className="img-card" src={item.flag} alt={item.name} />
+                <ol className="card-list">
+                  <li>population: {item.population}</li>
+                  <li>Region: {item.region}</li>
+                  <li>Capital:{item.capital}</li>
+                </ol>
+              </div>
             </div>
           ))}
         </div>
