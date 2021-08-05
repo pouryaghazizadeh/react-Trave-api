@@ -11,4 +11,6 @@ this app is a live search and use this api
 ```bash
 "https://restcountries.eu/rest/v2/all"
 ```
-that we can access to 
+that we can access to flag and country 
+
+this app have a primitive style
