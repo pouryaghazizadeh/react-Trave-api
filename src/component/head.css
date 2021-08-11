@@ -1,0 +1,46 @@
+#navbar{
+    /* background: green; */
+}
+.light-mood{
+    color: #000;
+    background:#fff ;
+}
+.dark-mood{
+    color: #fff;
+    background:   #000;
+}
+
+
+
+
+
+.titel{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    background: red;
+    width: 100vw;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    width: 300px;
+    height: 400px;
+    background: gold;
+    margin: 10px;
+}
+.img-card{
+    height: 100px;
+    width: 100px;
+}

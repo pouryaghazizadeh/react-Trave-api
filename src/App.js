@@ -1,10 +1,10 @@
-import Search from "./component/Search"
+import Head from "./component/Head"
 import { BrowserRouter as Router } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
      <Router>
-     <Search/>
+     <Head/>
      </Router>
     </div>
   );
