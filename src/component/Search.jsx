@@ -3,6 +3,7 @@ import "./search.css";
 import { useState, useEffect } from "react";
 
 function Search() {
+  const [clockState, setClockState] = useState();
   const [error, setError] = useState(null); //this use state is for check error
   const [isLoaded, setIsLoaded] = useState(false); //this use state active when data loading
   const [items, setItems] = useState([]); // this is for update data that comming from api
@@ -39,6 +40,12 @@ function Search() {
     });
   }
 
+  useEffect(() => {
+    setInterval(() => {
+      const date = new Date();
+      setClockState(date.toLocaleTimeString());
+    }, 1000);
+  }, []);
   // write Condition for if we have any problem
   if (error) {
     return <>{error.message}</>;
@@ -48,6 +55,9 @@ function Search() {
     return (
       <div className="wrapper">
         {/* this is mother tag */}
+        <div>
+          <div style={{ fontSize: "55px", margin: "60px" }}>{clockState}</div>
+        </div>
 
         <div className="search-wrapper">
           {/* this div have search box */}
@@ -64,15 +74,17 @@ function Search() {
         {/* this div is our cards */}
         <div className="card-grid">
           {search(items).map((item) => (
-            <div className="card">
-              <div className="Card" key={item.callingCodes}>
-                <h2 className="card-name">{item.name}</h2>
-                <img className="img-card" src={item.flag} alt={item.name} />
-                <ol className="card-list">
-                  <li>population: {item.population}</li>
-                  <li>Region: {item.region}</li>
-                  <li>Capital:{item.capital}</li>
-                </ol>
+            <div>
+              <div className="card">
+                <div className="Card" key={item.callingCodes}>
+                  <h2 className="card-name">{item.name}</h2>
+                  <img className="img-card" src={item.flag} alt={item.name} />
+                  <ol className="card-list">
+                    <li>population: {item.population}</li>
+                    <li>Region: {item.region}</li>
+                    <li>Capital:{item.capital}</li>
+                  </ol>
+                </div>
               </div>
             </div>
           ))}

@@ -1,19 +1,4 @@
-/* 
-.mother-card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 6px;
-}
-.card{
-    width: 200px;
-    height: 300px;
-}
-.img-card{
-    width: 100px;
-    height: 200px;
 
-} */
 
 .card-grid{
     display: flex;
