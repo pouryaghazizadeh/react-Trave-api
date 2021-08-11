@@ -1,8 +1,9 @@
 import React from "react";
-import "./search.css";
+import "./head.css";
 import { useState, useEffect } from "react";
 
-function Search() {
+function Head() {
+  const [mood, setMood] = useState(false);
   const [clockState, setClockState] = useState();
   const [error, setError] = useState(null); //this use state is for check error
   const [isLoaded, setIsLoaded] = useState(false); //this use state active when data loading
@@ -46,6 +47,7 @@ function Search() {
       setClockState(date.toLocaleTimeString());
     }, 1000);
   }, []);
+
   // write Condition for if we have any problem
   if (error) {
     return <>{error.message}</>;
@@ -53,14 +55,21 @@ function Search() {
     return <>loading...</>;
   } else {
     return (
-      <div className="wrapper">
-        {/* this is mother tag */}
-        <div>
-          <div style={{ fontSize: "55px", margin: "60px" }}>{clockState}</div>
-        </div>
+      <div className={mood ? "dark-mood":"light-mood"}>
+        <div className={mood ? "light-mood" :"dark-mood"} id="navbar">
+          <div className="titel">
+            <h1>Tworld</h1>
+            <button
+              value={mood}
+              onClick={() => {
+                setMood(!mood);
+                console.log(mood);
+              }}
+            >
+              mood
+            </button>
+          </div>
 
-        <div className="search-wrapper">
-          {/* this div have search box */}
           <input
             type="search"
             name="search-form"
@@ -70,7 +79,10 @@ function Search() {
             value={q} //q comming from use state
             onChange={(e) => setQ(e.target.value)} //get and update value
           />
+
+          <div className="div-clock">{clockState}</div>
         </div>
+
         {/* this div is our cards */}
         <div className="card-grid">
           {search(items).map((item) => (
@@ -94,4 +106,4 @@ function Search() {
   }
 }
 
-export default Search;
+export default Head;
