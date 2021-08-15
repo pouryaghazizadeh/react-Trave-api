@@ -1,11 +1,12 @@
-import Head from "./component/Head"
-import { BrowserRouter as Router } from 'react-router-dom'
+
+import Home from "./component/Home";
+
 function App() {
   return (
     <div className="App">
-     <Router>
-     <Head/>
-     </Router>
+     
+        <Home />
+      
     </div>
   );
 }

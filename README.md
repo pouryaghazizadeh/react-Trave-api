@@ -11,4 +11,4 @@ this app is a live search and use this api
 ```bash
 "https://restcountries.eu/rest/v2/all"
 ```
-that we can access to flag and country and also have a live clock
+that we can access to flag every country 
