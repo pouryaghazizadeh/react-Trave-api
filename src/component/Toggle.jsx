@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Toggle({theme,toggleTheme}) {
-    console.log(theme);
+function Toggle({ toggleTheme}) {
+
     return (
         <div>
+            <div>
+            <button  onClick = {(e)=>{toggleTheme()}}>click</button> 
+            </div>
 
         
             
