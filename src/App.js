@@ -1,18 +1,21 @@
-
+import { ThemeProvider } from "styled-components";
 import Home from "./component/Home";
 import Navbar from "./component/Navbar";
-// import Head from "./componentssss/z/Head";
-import {useDarkMood}from "./styles/useDarkMood"
+import { globalStyles } from "./styles/globalStyles";
+import { useDarkMood } from "./styles/useDarkMood";
+import { lightTheme, darkTheme} from "./styles/globalStyles"
 function App() {
-  const [theme,toggleTheme] = useDarkMood()
+  const [theme, toggleTheme] = useDarkMood();
+const themeMood = theme === "light"?lightTheme:darkTheme;
 
   return (
-    <div className="App">
-     {/* <Head/> */}
-     <Navbar theme={theme} toggleTheme={toggleTheme}/>
+    <ThemeProvider theme = {themeMood}>
+      <div className="App">
+        <globalStyles/>
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
         <Home />
-      
-    </div>
+      </div>
+    </ThemeProvider>
   );
 }
 
