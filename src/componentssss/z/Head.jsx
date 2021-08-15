@@ -1,9 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./head.css";
-
-// import {Div,Div}from "./style"
-import { useState, useEffect } from "react";
-
 
 function Head() {
   const [mood, setMood] = useState(false);
@@ -88,19 +84,19 @@ function Head() {
 
         {/* this div is our cards */}
         <div className="container-card">
-          {search(items).map((item,index) => (
+          {search(items).map((item, index) => (
             // <div className = "" >
-              <div className="cards" key = {index}>
-                <div className="Card" key={item.callingCodes}>
-                  <h2 className="card-name">{item.name}</h2>
-                  <img className="img-card" src={item.flag} alt={item.name} />
-                  <ol className="card-list">
-                    <li>population: {item.population}</li>
-                    <li>Region: {item.region}</li>
-                    <li>Capital:{item.capital}</li>
-                  </ol>
-                </div>
+            <div className="cards" key={index}>
+              <div className="Card" key={item.callingCodes}>
+                <h2 className="card-name">{item.name}</h2>
+                <img className="img-card" src={item.flag} alt={item.name} />
+                <ol className="card-list">
+                  <li>population: {item.population}</li>
+                  <li>Region: {item.region}</li>
+                  <li>Capital:{item.capital}</li>
+                </ol>
               </div>
+            </div>
             // </div>
           ))}
         </div>

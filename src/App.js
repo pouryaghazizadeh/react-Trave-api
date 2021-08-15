@@ -1,11 +1,15 @@
 
 import Home from "./component/Home";
-import Head from "./componentssss/z/Head";
-
+import Navbar from "./component/Navbar";
+// import Head from "./componentssss/z/Head";
+import {useDarkMood}from "./styles/useDarkMood"
 function App() {
+  const [theme,toggleTheme] = useDarkMood()
+
   return (
     <div className="App">
-     <Head/>
+     {/* <Head/> */}
+     <Navbar theme={theme} toggleTheme={toggleTheme}/>
         <Home />
       
     </div>
