@@ -88,9 +88,9 @@ function Head() {
 
         {/* this div is our cards */}
         <div className="container-card">
-          {search(items).map((item) => (
+          {search(items).map((item,index) => (
             // <div className = "" >
-              <div className="cards">
+              <div className="cards" key = {index}>
                 <div className="Card" key={item.callingCodes}>
                   <h2 className="card-name">{item.name}</h2>
                   <img className="img-card" src={item.flag} alt={item.name} />
