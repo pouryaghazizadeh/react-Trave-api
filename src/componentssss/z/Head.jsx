@@ -1,6 +1,9 @@
 import React from "react";
 import "./head.css";
+
+// import {Div,Div}from "./style"
 import { useState, useEffect } from "react";
+
 
 function Head() {
   const [mood, setMood] = useState(false);
@@ -55,8 +58,8 @@ function Head() {
     return <>loading...</>;
   } else {
     return (
-      <div className={mood ? "dark-mood":"light-mood"}>
-        <div className={mood ? "light-mood" :"dark-mood"} id="navbar">
+      <div className={mood ? "dark-mood" : "light-mood"}>
+        <div className={mood ? "light-mood" : "dark-mood"} id="navbar">
           <div className="titel">
             <h1>Tworld</h1>
             <button
@@ -84,10 +87,10 @@ function Head() {
         </div>
 
         {/* this div is our cards */}
-        <div className="card-grid">
+        <div className="container-card">
           {search(items).map((item) => (
-            <div>
-              <div className="card">
+            // <div className = "" >
+              <div className="cards">
                 <div className="Card" key={item.callingCodes}>
                   <h2 className="card-name">{item.name}</h2>
                   <img className="img-card" src={item.flag} alt={item.name} />
@@ -98,7 +101,7 @@ function Head() {
                   </ol>
                 </div>
               </div>
-            </div>
+            // </div>
           ))}
         </div>
       </div>

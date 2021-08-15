@@ -1,6 +1,4 @@
-#navbar{
-    /* background: green; */
-}
+
 .light-mood{
     color: #000;
     background:#fff ;
@@ -29,14 +27,16 @@
     justify-content: space-between;
 }
 
-.card-grid{
+.container-card{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.card{
+.cards{
     width: 300px;
     height: 400px;
+    display: flex;
+    justify-content: center;
     background: gold;
     margin: 10px;
 }
