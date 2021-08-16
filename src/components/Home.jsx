@@ -1,13 +1,9 @@
 import React from "react";
 
 function Home() {
-  return <div>
-
-
-
-
-
-  </div>;
+  return <>
+  <h1>jhhgf</h1>
+  </>
 }
 
 export default Home;
