@@ -1,21 +1,21 @@
-import { ThemeProvider } from "styled-components";
-import Home from "./component/Home";
-import Navbar from "./component/Navbar";
-import { globalStyles } from "./styles/globalStyles";
-import { useDarkMood } from "./styles/useDarkMood";
-import { lightTheme, darkTheme} from "./styles/globalStyles"
+// import { ThemeProvider } from "styled-components";
+import Home from "./components/Home";
+import{ Navbar} from "./components/Navbar/Navbar";
+// import  {GlobalStyles}  from "./styles/GlobalStyles";
+// import { useDarkMood } from "./styles/useDarkMood";
+// import { lightTheme, darkTheme} from "./styles/GlobalStyles"
 function App() {
-  const [theme, toggleTheme] = useDarkMood();
-const themeMood = theme === "light"?lightTheme:darkTheme;
+//   const [theme, toggleTheme] = useDarkMood();
+// const themeMood = theme === "light"?lightTheme:darkTheme;
 
   return (
-    <ThemeProvider theme = {themeMood}>
+    // <ThemeProvider theme = {themeMood}>
       <div className="App">
-        <globalStyles/>
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        {/* <GlobalStyles/> */}
+        <Navbar/>
         <Home />
       </div>
-    </ThemeProvider>
+    //  </ThemeProvider>
   );
 }
 
