@@ -1,10 +1,9 @@
-import {H1} from "./view"
+import SearchBox from "../SearchBox/index"
 const Navbar = ({mood})=>{
     return(
         <>
-        <H1>helooooooo</H1>
-        
-        
+        <SearchBox/>
+
         
         </>
     )
