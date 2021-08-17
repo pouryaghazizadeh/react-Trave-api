@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import {mood}from "../props"
+import {props} from "../props"
 export const H1 = styled.h1`
-background: ${props=>props.mood?"red":"green"};
+background: ${props=>props.props===true? "":"black"};
 `

@@ -1,9 +1,9 @@
 import Navbar from "./components/navbar";
 function App() {
-  const mood = true
+  // const mood = true
   return (
     <div>
-      <Navbar mood = {mood}/>
+      <Navbar />
 
     </div>
   );
