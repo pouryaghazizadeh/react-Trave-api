@@ -1,11 +1,11 @@
 import React from "react";
-import { CheckBoxWrapper, ContainerToggel, ToggelLabel } from "./view";
+import { CheckBoxWrapper, ContainerToggle, ToggleLabel } from "./view";
 function Toggel() {
   return (
     <>
       <CheckBoxWrapper>
-        <ContainerToggel id="checkbox" type="checkbox" />
-        <ToggelLabel htmlFor="checkbox" />
+        <ContainerToggle id="checkbox" type="checkbox" />
+        <ToggleLabel htmlFor="checkbox" />
       </CheckBoxWrapper>
     </>
   );
