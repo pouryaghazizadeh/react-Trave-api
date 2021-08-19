@@ -1,18 +1,17 @@
-import SearchBox from "../SearchBox/index"
-import {ContainerNav,Title,ContainerTitle} from "./view"
-import Toggel  from "../Toggel/index"
-const Navbar = ({mood})=>{
-    return(
-        <ContainerNav>
-            <ContainerTitle>
-            <Title>Travel</Title>
-
-        <Toggel/>
-        </ContainerTitle>
-        <SearchBox/>
-
-        
-        </ContainerNav>
-    )
-}
-export default Navbar
+import Clock from "../clock/index";
+import SearchBox from "../searchBox/index";
+import Toggel from "../Toggel/index";
+import { ContainerNav, ContainerTitle, Title } from "./view";
+const Navbar = ({ mood }) => {
+  return (
+    <ContainerNav>
+      <ContainerTitle>
+        <Title>Travel</Title>
+        <Toggel />
+      </ContainerTitle>
+      <SearchBox />
+      <Clock />
+    </ContainerNav>
+  );
+};
+export default Navbar;

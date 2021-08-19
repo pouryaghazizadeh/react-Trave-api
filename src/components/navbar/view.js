@@ -5,13 +5,13 @@ export const Title = styled.h1`
   padding: 0px;
   font-size: xxx-large;
 `;
+//this style is for tag div that have h1 and toggle
 export const ContainerTitle = styled.div`
   width: 250px;
   height: 88px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  background: red;
 `;
 export const ContainerNav = styled.nav`
   width: 100vw;
