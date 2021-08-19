@@ -20,6 +20,6 @@ export const ContainerNav = styled.nav`
   margin: 0px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-space-evenly;
   background-color: green;
 `;
