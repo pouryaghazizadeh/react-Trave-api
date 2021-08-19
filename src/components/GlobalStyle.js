@@ -4,9 +4,12 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0px;
         margin: 0px;
         background-color: blue;
+        box-sizing:border-box;
+        font-family:Arial, Helvetica, sans-serif;
     }
     .RET{
         background-color: red;
+        
     }
 
 `;
