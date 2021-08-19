@@ -1,11 +1,15 @@
 import SearchBox from "../SearchBox/index"
-import {ContainerNav} from "./view"
+import {ContainerNav,Title,ContainerTitle} from "./view"
 import Toggel  from "../Toggel/index"
 const Navbar = ({mood})=>{
     return(
         <ContainerNav>
-        <SearchBox/>
+            <ContainerTitle>
+            <Title>Travel</Title>
+
         <Toggel/>
+        </ContainerTitle>
+        <SearchBox/>
 
         
         </ContainerNav>
