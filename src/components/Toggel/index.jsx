@@ -1,6 +1,5 @@
 import React from "react";
 import { CheckBoxWrapper, ContainerToggle, ToggleLabel } from "./view";
-import {useState}from "react"
 function Toggel() {
 const [r,setR] = usestate(false)
   return (
@@ -14,7 +13,6 @@ const [r,setR] = usestate(false)
       </CheckBoxWrapper>
 
       <div style = {{
-background: {r?red:black}
 
       }}>
 
