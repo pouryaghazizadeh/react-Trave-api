@@ -1,12 +1,14 @@
-import React from 'react'
-import {containerToggel}from "./view"
+import React from "react";
+import { CheckBoxWrapper, ContainerToggel, ToggelLabel } from "./view";
 function Toggel() {
-    return (
-        <containerToggel>
-            
-            
-        </containerToggel>
-    )
+  return (
+    <>
+      <CheckBoxWrapper>
+        <ContainerToggel id="checkbox" type="checkbox" />
+        <ToggelLabel htmlFor="checkbox" />
+      </CheckBoxWrapper>
+    </>
+  );
 }
 
-export default Toggel
+export default Toggel;
