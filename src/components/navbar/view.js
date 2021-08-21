@@ -11,6 +11,7 @@ export const ContainerTitle = styled.div`
   height: 88px;
   display: flex;
   align-items: center;
+  margin-right:10vw;
   flex-wrap: wrap;
 `;
 export const ContainerNav = styled.nav`
