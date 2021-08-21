@@ -7,4 +7,5 @@ export const Search = styled.input`
   width: 150px;
   height: 27px;
   border-radius:5px;
+  margin-right: 20vw;
 `;
