@@ -1,7 +1,7 @@
 // import React, { useEffect, useState } from "react";
 // import "./head.css";
 
-// function Head() {
+// function Cards() {
 //   const [mood, setMood] = useState(false);
 //   const [clockState, setClockState] = useState();
 //   const [error, setError] = useState(null); //this use state is for check error
@@ -105,4 +105,4 @@
 //   }
 // }
 
-// export default Head;
+// export default Cards;
