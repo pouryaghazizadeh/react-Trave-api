@@ -12,5 +12,4 @@ this app use this api
 "https://restcountries.eu/rest/v2/all"
 ```
 that we can access to flag every country 
-this app have App.js 
-and a vavbar component and serchbox
+this  App.js have a Navbar component and cards component
