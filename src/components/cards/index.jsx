@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-
+import {Card}from "./view"
 function Cards() {
   const [mood, setMood] = useState(false);
+  const [clockState, setClockState] = useState();
   const [error, setError] = useState(null); //this use state is for check error
   const [isLoaded, setIsLoaded] = useState(false); //this use state active when data loading
   const [items, setItems] = useState([]); // this is for update data that comming from api
@@ -38,6 +39,12 @@ function Cards() {
     });
   }
 
+  useEffect(() => {
+    setInterval(() => {
+      const date = new Date();
+      setClockState(date.toLocaleTimeString());
+    }, 1000);
+  }, []);
 
   // write Condition for if we have any problem
   if (error) {
@@ -71,14 +78,14 @@ function Cards() {
             onChange={(e) => setQ(e.target.value)} //get and update value
           />
 
-       
+          <div className="div-clock">{clockState}</div>
         </div>
 
         {/* this div is our cards */}
         <div className="container-card">
           {search(items).map((item, index) => (
          
-            <div className="cards" key={index}>
+            <Card className="cards" key={index}>
               <div className="Card" key={item.callingCodes}>
                 <h2 className="card-name">{item.name}</h2>
                 <img className="img-card" src={item.flag} alt={item.name} />
@@ -88,7 +95,7 @@ function Cards() {
                   <li>Capital:{item.capital}</li>
                 </ol>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
