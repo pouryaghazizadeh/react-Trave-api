@@ -1,13 +1,13 @@
 import Clock from "../clock/index";
 import SearchBox from "../searchBox/index";
-import Toggel from "../Toggel/index";
+
 import { ContainerNav, ContainerTitle, Title } from "./view";
 const Navbar = ({ mood }) => {
   return (
     <ContainerNav>
       <ContainerTitle>
         <Title>Travel</Title>
-        <Toggel />
+       
       </ContainerTitle>
       <SearchBox />
       <Clock />
